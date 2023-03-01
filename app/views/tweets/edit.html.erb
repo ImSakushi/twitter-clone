@@ -1,0 +1,10 @@
+<h1>Modifier votre tweet</h1>
+
+<%= render "form", tweet: @tweet %>
+
+<br>
+
+<div>
+  <%= link_to "Afficher ce tweet", @tweet %> |
+  <%= link_to "Revenir à la timeline", tweets_path %>
+</div>
