@@ -1,8 +1,6 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: %i[ show edit update destroy ]
 
-  require 'open-uri'
-  require 'json'
 
   # GET /tweets or /tweets.json
   def index
@@ -23,17 +21,6 @@ class TweetsController < ApplicationController
   def edit
   end
 
-  def get_joke
-    url = 'https://blague.xyz/api/joke/random'
-    joke = JSON.parse(open(url).read)
-    @joke = joke['joke']
-    render json: { joke: @joke }
-  end
-
-  def random_joke
-    response = get_joke
-    @joke = response[:joke]
-  end
 
   # POST /tweets or /tweets.json
   def create
@@ -69,7 +56,7 @@ class TweetsController < ApplicationController
     @tweet.destroy
 
     respond_to do |format|
-      format.html { redirect_to tweets_url, notice: "Tweet was successfully destroyed." }
+      format.html { redirect_to tweets_url, notice: "Le tweet a été supprimé." }
       format.json { head :no_content }
     end
   end
@@ -82,6 +69,6 @@ class TweetsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tweet_params
-      params.require(:tweet).permit(:username, :body)
+      params.require(:tweet).permit(:username, :body, :image, :profilepicture)
     end
 end

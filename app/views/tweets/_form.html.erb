@@ -20,6 +20,11 @@
     <%= form.text_area :body, class: "new-tweet", placeholder: "Quoi de neuf ?" %>
   </div>
 
+    <div class="form-group">
+    <%= form.label "Image" %>
+    <%= form.text_area :image, class: "new-tweet", placeholder: "Url de l'image" %>
+  </div>
+
   <div class="form-group">
     <%= form.submit "Tweeter", class: "btn btn-primary rounded-pill" %>
   </div>

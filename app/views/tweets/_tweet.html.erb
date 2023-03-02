@@ -1,8 +1,15 @@
 <div class="timeline" id="<%= dom_id tweet %>">
-
+  <div class="disposition">
+    <img src="https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png" alt="profile picture" class="profile-pic">
+    <div class="tweet-body">
     <p class="fw-bold tweet-username"><%= tweet.username %></p>
-  <p class="tweet-body">
-    <%= tweet.body %>
-  </p>
-
+      <p class="tweet-body">
+      <%= tweet.body %>
+      <br>
+      <% if tweet.image.present? %>
+      <%= image_tag tweet.image, alt: 'Mon image', class: "image-tweet" %>
+      <% end %>
+      </p>
+    </div>
+  </div>
 </div>
