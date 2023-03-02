@@ -4,7 +4,7 @@ class TweetsController < ApplicationController
 
   # GET /tweets or /tweets.json
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.order(created_at: :desc)
   end
 
 
@@ -69,6 +69,6 @@ class TweetsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tweet_params
-      params.require(:tweet).permit(:username, :body, :image, :profilepicture)
+      params.require(:tweet).permit(:username, :body, :image, :profilepicture, :name)
     end
 end

@@ -41,11 +41,8 @@
   max-width: 764px;
 }
 
- .tweets {
-  margin-left: 3vw;
- }
 
- .tweet-username {
+ .tweet-name {
   margin-bottom: 0.2rem;
  }
 
@@ -140,4 +137,14 @@ a:hover {
 
 .disposition {
   display: flex;
+}
+
+.username-flex {
+  display: flex;
+}
+
+.tweet-username {
+  color: #818F9C;
+  margin-bottom: 0.2rem;
+  margin-left: 0.25rem;
 }

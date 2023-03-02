@@ -10,6 +10,11 @@
     </div>
   <% end %>
 
+    <div class="form-group">
+    <%= form.label "Nom :" %>
+    <%= form.text_field :name, class: "new-tweet", placeholder: "Votre nom ?" %>
+  </div>
+
   <div class="form-group">
     <%= form.label "Nom d'utilisateur :" %>
     <%= form.text_field :username, class: "new-tweet", placeholder: "Votre pseudo ?" %>

@@ -1,3 +1,3 @@
 class Tweet < ApplicationRecord
-  validates :username, :body, presence: true
+  validates :username, :body, :name, presence: true
 end
