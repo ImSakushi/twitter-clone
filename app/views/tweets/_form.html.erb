@@ -2,7 +2,6 @@
   <% if tweet.errors.any? %>
     <div class="alert alert-danger">
       <h2><%= pluralize(tweet.errors.count, "error") %> prohibited this tweet from being saved:</h2>
-
       <ul>
         <% tweet.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -13,7 +12,7 @@
 
   <div class="form-group">
     <%= form.label "Nom d'utilisateur :" %>
-    <%= form.text_field :username, class: "new-tweet" %>
+    <%= form.text_field :username, class: "new-tweet", placeholder: "Votre pseudo ?" %>
   </div>
 
   <div class="form-group">
@@ -22,6 +21,6 @@
   </div>
 
   <div class="form-group">
-    <%= form.submit "ok", class: "btn btn-primary rounded-pill" %>
+    <%= form.submit "Tweeter", class: "btn btn-primary rounded-pill" %>
   </div>
 <% end %>

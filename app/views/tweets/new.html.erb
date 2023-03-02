@@ -1,9 +1,9 @@
-<h1>Quoi de neuf ?</h1>
-
+<h1>Nouveau tweet</h1>
+  <div class="cross">
+    <%# <%= link_to "Revenir à la timeline", tweets_path %>
+    <a href="/"><svg fill="#F6F9F9" viewBox="0 0 24 24" aria-hidden="true" style="color: rgb(125 229 255);"><g><path d="M10.59 12L4.54 5.96l1.42-1.42L12 10.59l6.04-6.05 1.42 1.42L13.41 12l6.05 6.04-1.42 1.42L12 13.41l-6.04 6.05-1.42-1.42L10.59 12z"></path></g></svg></a>
+  </div>
+  <br>
 <%= render "form", tweet: @tweet %>
 
 <br>
-
-<div>
-  <%= link_to "Revenir à la timeline", tweets_path %>
-</div>
