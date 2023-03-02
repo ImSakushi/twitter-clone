@@ -3,13 +3,12 @@
   <h1 class="mb-4">Accueil</h1>
   <div class="tweets" id="tweets">
     <% @tweets.each do |tweet| %>
-    <div class="tweet-content">
-      <%= render tweet %>
-      <p>
-        <%= link_to "Afficher ce tweet", tweet, class: "btn btn-secondary btn-sm" %>
-      </p>
-    </div>
+    <a href="<%= tweet_path(tweet) %>">
+      <div class="tweet-content">
+        <%= render tweet %>
+      </div>
+    </a>
     <% end %>
   </div>
 
-  <%= link_to "Tweeter", new_tweet_path, class: "btn btn-primary rounded-pill" %>
+  <%= link_to "Tweeter", new_tweet_path, class: "btn btn-primary rounded-pill bouton" %>
