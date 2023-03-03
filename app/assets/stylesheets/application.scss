@@ -231,6 +231,12 @@ a.user-mention {
     left: 40px;
     --bs-btn-padding-x: 1rem;
   }
+  .side-text-flex {
+    display: none;
+  }
+  .logo-twitter {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -244,4 +250,5 @@ a.user-mention {
     padding-right: 0;
     padding-left: 0;
   }
+
 }
