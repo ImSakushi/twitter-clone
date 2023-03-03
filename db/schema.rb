@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_02_145216) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_03_141302) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,6 +22,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_02_145216) do
     t.text "image"
     t.text "profilepicture"
     t.string "name"
+    t.boolean "check"
   end
 
 end
