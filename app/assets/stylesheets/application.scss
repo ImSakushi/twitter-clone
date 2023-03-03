@@ -91,7 +91,7 @@ a:hover {
 
 .bouton {
   position: fixed;
-  bottom: 20px;
+  bottom: 144px;
   left: 72px;
   margin-bottom: 14px;
   --bs-btn-padding-x: 5.75rem;
@@ -103,7 +103,7 @@ a:hover {
 .logo-twitter {
   position: fixed;
   top: 36px;
-  left: 83px;
+  left: 72px;
   margin-bottom: 14px;
   height: 36px;
 }
@@ -211,12 +211,23 @@ a.user-mention {
 
 .side-text {
   font-size: 20px;
+  margin-left: 12px;
+}
+
+.side-logo-flex {
+  display: flex;
+  align-items: center;
+}
+
+.side-logo {
+  height: 24px;
+  margin-bottom: 8px;
 }
 
 .side-text-flex {
   position: fixed;
   top: 84px;
-  left: 83px;
+  left: 72px;
   line-height: 51px;
 }
 
