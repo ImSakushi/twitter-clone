@@ -171,6 +171,21 @@ a:hover {
   margin-left: 0.25rem;
 }
 
+a.user-mention {
+  color: #1da1f2;
+  text-decoration: none;
+}
+
+.mentions {
+  color: #1da1f2;
+  text-decoration: none;
+}
+
+.mentions:hover {
+  color: #1da1f2;
+  text-decoration: underline;
+}
+
 @media (max-width: 1200px) {
   .tweet-text {
     display: none;

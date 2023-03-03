@@ -5,19 +5,22 @@
   <% else %>
     <img src="https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png" alt="default profile picture" class="profile-pic">
   <% end %>
-
     <div class="tweet-body">
       <div class="username-flex">
         <p class="fw-bold tweet-name"><%= tweet.name %></p>
         <p class="tweet-username">@<%= tweet.username %></p>
       </div>
-        <p class="tweet-body">
-        <%= tweet.body %>
+      <p class="tweet-body">
+        <%=
+          tweet.body.gsub(/@(\w+)/) do |match|
+            link_to match, tweet_path($1), class: "mentions"
+          end.html_safe
+        %>
         <br>
         <% if tweet.image.present? %>
-        <%= image_tag tweet.image, alt: 'Mon image', class: "image-tweet" %>
+          <%= image_tag tweet.image, alt: 'Mon image', class: "image-tweet" %>
         <% end %>
-        </p>
+      </p>
     </div>
   </div>
 </div>
