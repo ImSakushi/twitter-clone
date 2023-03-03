@@ -42,16 +42,21 @@ class TweetsController < ApplicationController
 
   # PATCH/PUT /tweets/1 or /tweets/1.json
   def update
-    respond_to do |format|
-      if @tweet.update(tweet_params)
-        format.html { redirect_to tweet_url(@tweet), notice: "Tweet was successfully updated." }
-        format.json { render :show, status: :ok, location: @tweet }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @tweet.errors, status: :unprocessable_entity }
+    if params[:password] == "123"
+      respond_to do |format|
+        if @tweet.update(tweet_params)
+          format.html { redirect_to tweet_url(@tweet), notice: "Tweet was successfully updated." }
+          format.json { render :show, status: :ok, location: @tweet }
+        else
+          format.html { render :edit, status: :unprocessable_entity }
+          format.json { render json: @tweet.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      redirect_to tweet_url(@tweet), alert: "Mot de passe incorrect."
     end
   end
+
 
   # DELETE /tweets/1 or /tweets/1.json
   def destroy
@@ -59,7 +64,7 @@ class TweetsController < ApplicationController
       @tweet.destroy
       redirect_to tweets_url, notice: "Le tweet a été supprimé."
     else
-      redirect_to tweets_url, notice: "Mot de passe incorrect, le tweet n'a pas été supprimé."
+      redirect_to tweets_url, notice: "Mot de passe incorrect, le tweet n'a pas été."
     end
   end
 

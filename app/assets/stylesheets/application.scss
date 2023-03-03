@@ -100,6 +100,14 @@ a:hover {
   font-weight: bold;
 }
 
+.logo-twitter {
+  position: fixed;
+  top: 36px;
+  left: 83px;
+  margin-bottom: 14px;
+  height: 36px;
+}
+
 .new-tweet {
   background-color: #15202B;
   border: none;
@@ -199,6 +207,17 @@ a.user-mention {
 .mentions:hover {
   color: #1da1f2;
   text-decoration: underline;
+}
+
+.side-text {
+  font-size: 20px;
+}
+
+.side-text-flex {
+  position: fixed;
+  top: 84px;
+  left: 83px;
+  line-height: 51px;
 }
 
 @media (max-width: 1200px) {
