@@ -11,11 +11,7 @@
         <p class="tweet-username">@<%= tweet.username %></p>
       </div>
       <p class="tweet-body">
-        <%=
-          tweet.body.gsub(/@(\w+)/) do |match|
-            link_to match, tweet_path($1), class: "mentions"
-          end.html_safe
-        %>
+      <%= tweet.body %>
         <br>
         <% if tweet.image.present? %>
           <%= image_tag tweet.image, alt: 'Mon image', class: "image-tweet" %>
