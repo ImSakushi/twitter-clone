@@ -25,12 +25,17 @@
     <%= form.text_area :body, class: "new-tweet", placeholder: "Quoi de neuf ?" %>
   </div>
 
-    <div class="form-group">
+  <div class="form-group">
     <%= form.label "Image" %>
-    <%= form.text_area :image, class: "new-tweet", placeholder: "Url de l'image" %>
+    <%= form.text_field :image, class: "new-tweet", placeholder: "Url de l'image" %>
+  </div>
+
+    <div class="form-group">
+    <%= form.label "Image de profil" %>
+    <%= form.text_field :profilepicture, class: "new-tweet", placeholder: "Url de Image de profil" %>
   </div>
 
   <div class="form-group">
-    <%= form.submit "Tweeter", class: "btn btn-primary rounded-pill" %>
+    <%= form.submit "Tweeter", class: "btn btn-primary rounded-pill mt-3" %>
   </div>
 <% end %>
