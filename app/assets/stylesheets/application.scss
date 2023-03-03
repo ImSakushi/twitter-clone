@@ -98,6 +98,8 @@ a:hover {
   --bs-btn-padding-y: 0.775rem;
   font-size: 17px;
   font-weight: bold;
+  --bs-btn-bg: #1D9BF0;
+  --bs-btn-border-color: #1D9BF0;
 }
 
 .logo-twitter {
@@ -219,6 +221,10 @@ a.user-mention {
   align-items: center;
 }
 
+.side-logo-flex:hover {
+  cursor: pointer;
+}
+
 .side-logo {
   height: 24px;
   margin-bottom: 8px;
@@ -230,6 +236,8 @@ a.user-mention {
   left: 72px;
   line-height: 51px;
 }
+
+
 
 @media (max-width: 1200px) {
   .tweet-text {
