@@ -21,6 +21,7 @@
 }
 
 
+
 </style>
 <div style="margin-top: 4rem;">
   <div class="cross">
@@ -33,6 +34,8 @@
 
   <div class="mt-3">
     <%= link_to "Modifier ce tweet", edit_tweet_path(@tweet) %>
-    <%= link_to "Supprimer ce tweet", @event, data: { turbo_method: :delete, turbo_confirm: "Supprimer le tweet ?" }, class:"text-danger" %>
+    <%= form_tag tweet_path(@tweet), method: :delete do %>
+      <%= password_field_tag :password, '', placeholder: "Mot de passe", class: "delete-pass" %>
+      <%= submit_tag "Supprimer ce tweet", class: "btn btn-danger", data: { confirm: "Supprimer le tweet ?" } %>
+    <% end %>
   </div>
-</div>

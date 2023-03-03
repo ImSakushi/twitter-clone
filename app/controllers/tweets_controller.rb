@@ -55,13 +55,14 @@ class TweetsController < ApplicationController
 
   # DELETE /tweets/1 or /tweets/1.json
   def destroy
-    @tweet.destroy
-
-    respond_to do |format|
-      format.html { redirect_to tweets_url, notice: "Le tweet a été supprimé." }
-      format.json { head :no_content }
+    if params[:password] == "123"
+      @tweet.destroy
+      redirect_to tweets_url, notice: "Le tweet a été supprimé."
+    else
+      redirect_to tweets_url, notice: "Mot de passe incorrect, le tweet n'a pas été supprimé."
     end
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
