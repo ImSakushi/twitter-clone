@@ -117,11 +117,21 @@ a:hover {
 .cross {
   color: #F6F9F9;
   width: 19px;
-  display: block;
+}
+
+.write {
+  color: #F6F9F9;
+  width: 19px;
+  display: none;
 }
 
 .cross:hover {
   background-color: #29363F;
+}
+
+.tweet-text {
+  margin-bottom: 0;
+  display: block;
 }
 
 .image-tweet {
@@ -159,4 +169,24 @@ a:hover {
   color: #818F9C;
   margin-bottom: 0.2rem;
   margin-left: 0.25rem;
+}
+
+@media (max-width: 1200px) {
+  .tweet-text {
+    display: none;
+  }
+  .write {
+    display: block;
+  }
+  .bouton {
+    left: 40px;
+    --bs-btn-padding-x: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .bouton {
+    left: 545px;
+    --bs-btn-padding-x: 1rem;
+  }
 }
