@@ -10,13 +10,10 @@
         <p class="fw-bold tweet-name"><%= tweet.name %></p>
         <p class="tweet-username">@<%= tweet.username %></p>
       </div>
-      <p class="tweet-body">
-      <%= tweet.body %>
-        <br>
+      <%= simple_format tweet.body %>
         <% if tweet.image.present? %>
           <%= image_tag tweet.image, alt: 'Mon image', class: "image-tweet" %>
         <% end %>
-      </p>
     </div>
   </div>
 </div>
