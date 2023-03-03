@@ -186,7 +186,8 @@ a:hover {
 
 @media (max-width: 768px) {
   .bouton {
-    left: 545px;
+    left: inherit;
     --bs-btn-padding-x: 1rem;
+    right: 35px;
   }
 }
