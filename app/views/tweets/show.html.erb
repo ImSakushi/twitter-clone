@@ -20,6 +20,10 @@
  margin-bottom: 0rem;
 }
 
+.disposition {
+  margin-top: 28px;
+}
+
 
 
 </style>
@@ -33,9 +37,9 @@
   <%= render @tweet, class: "show-tweet" %>
 
   <div class="mt-4">
-    <%= link_to "Modifier ce tweet", edit_tweet_path(@tweet) %>
+    <%= link_to "Modifier ce tweet", edit_tweet_path(@tweet), style: "padding: 6px;" %>
     <%= form_tag tweet_path(@tweet), method: :delete do %>
-      <%= password_field_tag :password, '', placeholder: "Mot de passe", class: "delete-pass delete-button" %>
       <%= submit_tag "Supprimer ce tweet", class: "text-danger delete-button", data: { confirm: "Supprimer le tweet ?" } %>
+      <%= password_field_tag :password, '', placeholder: "Mot de passe", class: "delete-pass delete-button" %>
     <% end %>
   </div>
