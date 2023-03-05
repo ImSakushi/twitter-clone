@@ -91,7 +91,7 @@ a:hover {
 
 .bouton {
   position: fixed;
-  bottom: 122px;
+  top: 610px;
   left: 72px;
   margin-bottom: 14px;
   --bs-btn-padding-x: 5.75rem;
@@ -263,6 +263,8 @@ a.user-mention {
     left: inherit;
     --bs-btn-padding-x: 1rem;
     right: 35px;
+    top: inherit;
+    bottom: 52px;
   }
   .new-container {
     max-width: 100%;
