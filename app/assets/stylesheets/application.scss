@@ -167,6 +167,7 @@ a:hover {
   width:540px;
   height:400px;
   max-width: 100%;
+  margin-bottom: 8px;
 }
 
 .profile-pic {
@@ -242,6 +243,16 @@ a.user-mention {
   margin-top: 4px;
 }
 
+.tweet-button {
+  width: 19px;
+}
+
+.button-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 60px;
+  margin-top: 4px;
+}
 
 
 @media (max-width: 1200px) {
