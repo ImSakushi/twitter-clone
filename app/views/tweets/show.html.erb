@@ -32,10 +32,10 @@
 
   <%= render @tweet, class: "show-tweet" %>
 
-  <div class="mt-3">
+  <div class="mt-4">
     <%= link_to "Modifier ce tweet", edit_tweet_path(@tweet) %>
     <%= form_tag tweet_path(@tweet), method: :delete do %>
-      <%= password_field_tag :password, '', placeholder: "Mot de passe", class: "delete-pass" %>
-      <%= submit_tag "Supprimer ce tweet", class: "text-danger", data: { confirm: "Supprimer le tweet ?" } %>
+      <%= password_field_tag :password, '', placeholder: "Mot de passe", class: "delete-pass delete-button" %>
+      <%= submit_tag "Supprimer ce tweet", class: "text-danger delete-button", data: { confirm: "Supprimer le tweet ?" } %>
     <% end %>
   </div>

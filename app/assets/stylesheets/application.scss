@@ -184,6 +184,7 @@ a:hover {
 
 .disposition {
   display: flex;
+  margin-top: 28px;
 }
 
 .username-flex {
@@ -235,6 +236,11 @@ a.user-mention {
   top: 84px;
   left: 72px;
   line-height: 51px;
+}
+
+.delete-button {
+  background-color: #15202B;
+  border: none;
 }
 
 
